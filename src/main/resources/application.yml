@@ -1,6 +1,6 @@
 # https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 server:
-  port: 8761                    # 指定该Eureka实例的端口
+  port: 8000                    # 指定该Eureka实例的端口
 
 eureka:
   instance:
