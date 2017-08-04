@@ -2,13 +2,23 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: eureka-service
+
 eureka:
   instance:
-    hostname: discovery
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+    leaseRenewalIntervalInSeconds: 3  #心跳间隔时间3s
+    leaseExpirationDurationInSeconds: 5  #连续5s未响应时将服务注销
+  server:
+     waitTimeInMsWhenSyncEmpty: 0
+     enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+        defaultZone: http://${server.host}:${server.port}/eureka/
 
 
