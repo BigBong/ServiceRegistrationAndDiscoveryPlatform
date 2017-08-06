@@ -12,8 +12,6 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
  * Created by frodo on 2017/8/3.
  */
 @EnableEurekaServer
-@EnableHystrixDashboard
-@EnableTurbine
 @SpringBootApplication
 public class EurekaServiceApplication extends SpringBootServletInitializer {
 

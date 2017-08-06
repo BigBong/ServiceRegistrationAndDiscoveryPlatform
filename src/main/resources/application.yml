@@ -19,9 +19,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
 
-turbine:
-  aggregator:
-    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
-    appConfig: SAMPLE-HYSTRIX-AGGREGATE
-
 
