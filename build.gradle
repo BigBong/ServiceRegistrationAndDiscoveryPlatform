@@ -37,10 +37,15 @@ dependencyManagement {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.cloud:spring-cloud-starter-eureka-server")
+    compile("org.springframework.cloud:spring-cloud-starter-hystrix-dashboard")
+    compile("org.springframework.cloud:spring-cloud-starter-turbine") {
+        exclude module: 'spring-cloud-starter-eureka'
+    }
+
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 war {
     baseName = 'eurekaservice'
-    version =  '0.1.0'
+    version = '0.1.0'
 }

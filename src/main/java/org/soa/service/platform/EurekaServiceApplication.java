@@ -5,11 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 /**
  * Created by frodo on 2017/8/3.
  */
 @EnableEurekaServer
+@EnableHystrixDashboard
+@EnableTurbine
 @SpringBootApplication
 public class EurekaServiceApplication extends SpringBootServletInitializer {
 
